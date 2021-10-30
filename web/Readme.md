@@ -6,7 +6,7 @@
 Hmm, there seems to be some weird behaviour in python. Especially within `ctypes`
 
 # Hints
-`CVE`
+It is a `CVE`
 
 
 # Flag
