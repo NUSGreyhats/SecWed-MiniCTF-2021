@@ -10,11 +10,12 @@ app = Flask(__name__)
 @app.before_request
 def store():
     g.shared = mp.Manager().dict()
+    with open(__file__) as f:
+        g.code = f.read()
 
 @app.route('/')
 def index():
-    with open(__file__) as f:
-        return f"<pre>{f.read()}</pre>"
+    return f"<pre>{g.code}</pre>"
 
 
 @app.route('/<path:path>')
