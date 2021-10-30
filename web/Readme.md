@@ -3,7 +3,10 @@
 
 
 # Challenge Description
-Hmm, there seems to be some weird behaviour in python
+Hmm, there seems to be some weird behaviour in python. Especially within `ctypes`
+
+# Hints
+`CVE`
 
 
 # Flag
