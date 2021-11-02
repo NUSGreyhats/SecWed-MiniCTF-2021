@@ -1,0 +1,28 @@
+version: '3.7'
+
+x-pwn:
+    &pwn
+    cap_drop:
+        - all
+    cap_add:
+        - chown
+        - setuid
+        - setgid
+        - sys_admin
+    security_opt:
+        - apparmor=unconfined
+        - seccomp=unconfined
+
+services:
+
+    3177_python:
+        build: web/src
+        ports:
+            - "5000:5000"
+
+    checker:
+        << : *pwn
+        build: ./pwn/checker
+        ports:
+            - "5001:5001"
+            
