@@ -6,6 +6,7 @@ from html import escape
 import multiprocessing as mp
 
 app = Flask(__name__)
+mp.freeze_support()
 
 @app.before_request
 def store():
@@ -46,5 +47,4 @@ def sig_handler(signum, frame):
 
 
 if __name__ == '__main__':
-    mp.freeze_support()
     app.run(debug=True)
