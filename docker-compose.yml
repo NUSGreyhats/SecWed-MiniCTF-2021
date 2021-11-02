@@ -18,11 +18,11 @@ services:
     3177_python:
         build: web/src
         ports:
-            - "5000:5000"
+            - "5001:5000"
 
     checker:
         << : *pwn
         build: ./pwn/checker
         ports:
-            - "5001:5000"
+            - "5000:5000"
             

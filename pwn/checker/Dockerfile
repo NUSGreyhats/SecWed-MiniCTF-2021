@@ -9,7 +9,7 @@ RUN apt update
 # Install additional dependencies here e.g. 32-bit runtime (lib32z1)
 
 # This is the actual container that runs
-FROM redpwn/jail:v0.0.1
+FROM redpwn/jail:latest
 
 # Kill each connection after 60 wall seconds (more options in https://github.com/redpwn/jail#configuration-reference)
 ENV JAIL_TIME 60
