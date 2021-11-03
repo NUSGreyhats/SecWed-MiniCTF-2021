@@ -1,1 +1,0 @@
-docker run -dt -p 5000:5000 python-docker
